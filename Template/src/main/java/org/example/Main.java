@@ -2,8 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-
-        GuessTheNumber game = new GuessTheNumber();
-        game.play(2);
+        Game game = new WordGame();
+        game.play(1);
     }
 }
+
+
