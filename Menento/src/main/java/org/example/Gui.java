@@ -2,13 +2,17 @@ package org.example;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.geometry.Insets;
-import javafx.scene.input.KeyCode;
+
+
 
 public class Gui extends Application {
 
@@ -44,11 +48,14 @@ public class Gui extends Application {
         hBox.setMargin(colorBox3.getRectangle(), insets);
 
 
-        Label label = new Label("Press Ctrl-Z to undo the last change.");
+        Label label = new Label(" Ctrl-Z: Undo Ctrl-Y: Redo");
         label.setPadding(insets);
 
         // create a VBox that contains the HBox and the CheckBox
-        VBox vBox = new VBox(hBox, checkBox, label);
+        HistoryWindow historyWindow = new HistoryWindow(stage, controller);
+        Button historyButton = new Button("Show history");
+        historyButton.setOnAction(event -> historyWindow.show());
+        VBox vBox = new VBox(hBox, checkBox, label, historyButton);
         // call controller when the CheckBox is clicked
         checkBox.setOnAction(event -> {
             controller.setIsSelected(checkBox.isSelected());
@@ -56,18 +63,26 @@ public class Gui extends Application {
 
         // Set the HBox to be the root of the Scene
         Scene scene = new Scene(vBox);
-        scene.setOnKeyPressed(event -> {
-            if (event.isControlDown() && event.getCode() == KeyCode.Z) {
-                // Ctrl-Z: undo
-                System.out.println("Undo key combination pressed");
-                controller.undo();
-            }
-        });
+        installHistoryShortcuts(scene, controller);
 
 
         stage.setScene(scene);
         stage.setTitle("Memento Pattern Example");
         stage.show();
+        historyWindow.show();
+
+    }
+
+    public static void installHistoryShortcuts(Scene scene, Controller controller) {
+        scene.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
+            if (event.isControlDown() && event.getCode() == KeyCode.Z) {
+                controller.undo();
+                event.consume();
+            } else if (event.isControlDown() && event.getCode() == KeyCode.Y) {
+                controller.redo();
+                event.consume();
+            }
+        });
     }
 
     public void updateGui() {
