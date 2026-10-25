@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Menento</artifactId>
+    <artifactId>Memento</artifactId>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
