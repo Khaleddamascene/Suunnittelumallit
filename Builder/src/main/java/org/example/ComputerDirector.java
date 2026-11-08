@@ -7,7 +7,7 @@ public class ComputerDirector {
         this.builder = builder;
     }
 
-    public void constructGamingComputer() {
+    public void constructComputer() {
         builder.reset();
         builder.buildProcessor();
         builder.buildRAM();
