@@ -24,7 +24,7 @@ public class OfficeComputerBuilder implements ComputerBuilder{
 
     @Override
     public void buildHardDrive() {
-        computer.setHardDrive("256GB SSD");
+        computer.setHardDrive("512 GB SSD");
     }
 
     @Override
