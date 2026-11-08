@@ -15,7 +15,11 @@ public class Computer {
         this.ram = ram;
     }
 
-    public void setHardDrive(String graphicsCard){
+    public void setHardDrive(String hardDrive){
+        this.hardDrive = hardDrive;
+    }
+
+    public void setGraphicsCard(String graphicsCard) {
         this.graphicsCard = graphicsCard;
     }
 
