@@ -1,0 +1,21 @@
+PASS  SmartTv is a Device
+PASS  SmartTv starts disconnected
+PASS  browse is rejected while TV is off
+PASS  browse is rejected without network
+PASS  browse works when on + connected
+PASS  powering off closes the browser
+PASS  voice: power toggles the device on
+PASS  voice: case-insensitive 'volume up' (30 -> 40)
+PASS  voice: 'volume 75' sets absolute volume
+PASS  voice: volume clamped by device to 100
+PASS  voice: 'channel 12' sets channel
+PASS  voice: 'channel down' (12 -> 11)
+PASS  voice: mute sets volume 0
+PASS  voice: browse delegates to SmartTv
+PASS  unknown/empty/null commands change nothing
+PASS  SmartRemote controls a Radio
+PASS  Radio is not InternetCapable (no crash on browse)
+PASS  SmartRemote controls a plain Tv
+PASS  BasicRemote/AdvancedRemote work with SmartTv
+
+19 passed, 0 failed
