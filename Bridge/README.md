@@ -6,7 +6,7 @@ Laajennus Refactoring.Guru-sivuston Java-esimerkkiin
 ## Rakenne
 
 ```
-src/refactoring_guru/bridge/example/
+src/main/java/
 ├── Demo.java                      (alkuperäinen)
 ├── SmartDemo.java                 UUSI - esimerkkiohjelma
 ├── SmartTests.java                UUSI - 19 automaattista tarkistusta
