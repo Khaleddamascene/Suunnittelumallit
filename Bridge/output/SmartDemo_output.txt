@@ -1,0 +1,42 @@
+Remote: voice command "power on"
+Remote: power toggle
+Remote: voice command "browse example.com"
+SmartTV: cannot browse, no network connection
+Remote: connecting to HomeWiFi
+Remote: voice command "browse example.com"
+SmartTV: browsing example.com via HomeWiFi
+Remote: voice command "volume 55"
+Remote: voice command "channel 7"
+------------------------------------
+| I'm Smart TV set.
+| I'm enabled
+| Current volume is 55%
+| Current channel is 7
+| Network: HomeWiFi
+| Browsing: example.com
+------------------------------------
+
+Remote: voice command "mute"
+Remote: mute
+Remote: voice command "make me a sandwich"
+Remote: unknown command
+------------------------------------
+| I'm Smart TV set.
+| I'm enabled
+| Current volume is 0%
+| Current channel is 7
+| Network: HomeWiFi
+| Browsing: example.com
+------------------------------------
+
+=== Same SmartRemote, different devices ===
+Remote: voice command "power on"
+Remote: power toggle
+Remote: voice command "browse example.com"
+Remote: this device cannot browse the internet
+Remote: voice command "power on"
+Remote: power toggle
+Remote: voice command "volume up"
+Remote: volume up
+Remote: voice command "browse example.com"
+Remote: this device cannot browse the internet
