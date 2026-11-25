@@ -126,6 +126,7 @@ public final class RecommendationCli {
         System.out.println("Saved as recommendation " + catalog.size() + ".");
     }
 
+
     private String readText(String prompt) {
         while (true) {
             System.out.print(prompt);
