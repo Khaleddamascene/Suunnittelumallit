@@ -11,6 +11,23 @@
     <modules>
         <module>Abstract_Factory</module>
         <module>Composite</module>
+        <module>Factory_Method</module>
+        <module>Observer</module>
+        <module>Singleton</module>
+        <module>Decorator</module>
+        <module>State</module>
+        <module>Esimerkksi</module>
+        <module>Template</module>
+        <module>Strategy</module>
+        <module>Chain_Of_Responsibility</module>
+        <module>Memento</module>
+        <module>Proxy</module>
+        <module>Visitor</module>
+        <module>Builder</module>
+        <module>Adapter</module>
+        <module>Bridge</module>
+        <module>Flyweight</module>
+        <module>Prototype</module>
 
     </modules>
 
